@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("../imagens/bg_.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 5rem;
+}
+header nav a {
+  font-family: "Poppins", sans-serif;
+  color: #fd9800;
+  font-size: 4.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+header nav input {
+  font-size: 1rem;
+  color: white;
+  background-color: #fd9800;
+  padding: 20px 30px;
+  border-style: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header nav input:hover {
+  transform: scale(1.1);
+}
+
+main {
+  min-height: 100vh;
+}
+main section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section #modalPrincipal div {
+  border-style: none;
+  border-radius: 30px;
+  font-family: "Poppins", sans-serif;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main section #modalPrincipal div .modal-body {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+main section #modalPrincipal div .modal-body input {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main section #modalPrincipal div .modal-body h1 {
+  font-size: 25px;
+  text-align: center;
+}
+main section #modalPrincipal div .modal-body button {
+  color: white;
+  background-color: #fd9800;
+  width: 200px;
+  border-style: none;
+  border-radius: 10px;
+  padding: 16px;
+  transition: 0.3s;
+}
+main section #modalPrincipal div .modal-body button:hover {
+  transform: scale(1.1);
+}
+main section #modalLogin .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section #modalLogin .modal-body h1 {
+  margin-top: 0.9rem;
+}
+main section #modalLogin .modal-body input {
+  width: 250px;
+  margin-bottom: 5px;
+}
+main section #modalLogin .modal-body .btn {
+  width: 250px;
+  border-radius: 20px;
+}
+main section #modalLogin .modal-body .continuar {
+  background-color: #fd9800;
+  border-color: #fd9800;
+  color: white;
+  margin-bottom: 15px;
+}
+main section #modalLogin .modal-body .continuar:hover {
+  transform: scale(1.1);
+}
+main section #modalLogin .modal-body .google {
+  border: 1px solid gray;
+}
+main section #modalLogin .modal-body .google img {
+  height: 15px;
+  width: 15px;
+}
+main section #modalPrimeiro .modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+main section #modalPrimeiro .modal-body h1 {
+  margin: 1.3rem 0;
+  text-align: center;
+}
+main section #modalPrimeiro .modal-body input {
+  width: 250px;
+  margin-bottom: 5px;
+}
+main section #modalPrimeiro .modal-body .password {
+  margin-top: 1.5rem;
+}
+main section #modalPrimeiro .modal-body #criarConta {
+  width: 250px;
+  border-radius: 20px;
+  background-color: #fd9800;
+  border-color: #fd9800;
+  color: white;
+  margin: 15px 0;
+  transition: 0.4s;
+}
+main section #modalPrimeiro .modal-body #criarConta:hover {
+  transform: scale(1.1);
+}
+main section .mainTitle {
+  width: 80%;
+  font-family: "Poppins", sans-serif;
+  font-size: 100px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  z-index: -1;
+}
+main section .btn-close-login {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+}
+main section .modal-footer button {
+  color: white;
+  background-color: #fd9800;
+  width: 80px;
+  border-style: none;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 0.3s;
+}
+main section .modal-footer button:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  min-height: 20vh;
+  width: 100%;
+  padding: 0 50px;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: white;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .buttons {
+  display: flex;
+  gap: 10px;
+}
+footer .buttons a {
+  color: #fd9800;
+}
+footer .buttons a:hover {
+  transform: scale(1.1);
+  color: #fd9800;
+  border: 1px solid #fd9800;
+}
+
+.emBranco {
+  border-color: red !important;
+}
+
+@media (max-width: 1550px) {
+  .mainTitle p {
+    font-size: 60px;
+  }
+}
+@media (max-width: 890px) {
+  .mainTitle p {
+    font-size: 40px;
+  }
+  footer {
+    font-size: 15px;
+  }
+}
+@media (max-width: 620px) {
+  header nav a {
+    font-size: 2rem;
+  }
+  .mainTitle p {
+    font-size: 30px;
+  }
+  footer {
+    font-size: 15px;
+  }
+}
+@media (max-width: 530px) {
+  .mainTitle p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 390px) {
+  header nav {
+    justify-content: center;
+    gap: 15px;
+  }
+  header nav a {
+    font-size: 3rem;
+  }
+  header nav input {
+    padding: 1.3rem 1.9rem;
+    width: 8rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
