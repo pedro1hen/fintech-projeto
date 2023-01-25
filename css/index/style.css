@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../../imagens/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body .container-main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .container-main main {
+  background-color: rgb(255, 255, 255);
+  color: rgb(253, 152, 0);
+  border: 1px solid white;
+  border-radius: 50px;
+  height: 350px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+body .container-main main .title {
+  font-size: 50px;
+  width: 400px;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+body .container-main main .buttons {
+  margin-top: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+body .container-main main .buttons a {
+  color: white;
+  text-decoration: none;
+}
+body .container-main main .buttons .btn {
+  width: 200px;
+  background-color: rgb(253, 152, 0);
+  color: white;
+}
+body .container-main main .buttons .btn:hover {
+  border: 2px solid rgba(0, 0, 0, 0.13);
+}
+
+/*# sourceMappingURL=style.css.map */

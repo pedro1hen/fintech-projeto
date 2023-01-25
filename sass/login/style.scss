@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$cor-primaria: rgb(253, 152, 0);
+$cor-secundaria: rgb(235, 141, 0);
+
+body{
+    background-image: url(../../imagens/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+    .container-main{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+        main {
+            background-color: white;
+            color: $cor-primaria;
+            border: 1px solid white;
+            border-radius: 30px;
+            height: 350px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+    
+            .title{
+                font-size: 50px;
+                width: 400px;
+                height: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+    
+            .login{
+                margin-top: 10px;
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                input {
+                    width: 250px;
+                    margin-bottom: 5px;
+                }
+
+                .btn{
+                    width: 250px;
+                    border-radius: 20px;
+                }
+
+                #btn {                  
+                    background-color: $cor-primaria;  
+                    border-color: $cor-primaria;                    
+                    color: white;                    
+                    margin-bottom: 15px;
+
+                    &:hover{
+                        background-color: $cor-secundaria;
+                        border-color: $cor-secundaria;
+                    }
+                }
+
+                #btn2 {
+                   border: 1px solid gray;
+                    img{
+                        height: 15px;
+                        width: 15px;
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 410px){
+    main {
+        width: 280px;
+        border-radius: 30px;
+    }
+
+    .title, .login {
+        width: 280px;
+        font-size: 30px;
+    }
+
+    input, .btn{
+        width: 200px;
+        font-size: 13px;
+    }
+}
