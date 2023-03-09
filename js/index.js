@@ -43,30 +43,34 @@ const formInputs = {
     passwordConfirmation: document.querySelector('#passwordConfirmation')
 }
 
-const button = document.querySelector('#criarConta')
+function removeClassError() {
+    formInputs.name.classList.remove('error')
+    formInputs.email.classList.remove('error')
+    formInputs.password.classList.remove('error')
+    formInputs.passwordConfirmation.classList.remove('error')
+}
 
-button.addEventListener('click', (ev) => {
+const form = document.querySelector('form')
+
+form.addEventListener('submit', (ev) => {
     ev.preventDefault()
 
     try {
         validateName(formInputs.name.value)
-        formInputs.name.classList.add('success')
-        formInputs.name.classList.remove('error')
-
         validateEmail(formInputs.email.value)
-        formInputs.email.classList.add('success')
-        formInputs.email.classList.remove('error')
-
         validatePassword(formInputs.password.value)
-        formInputs.password.classList.add('success')
-        formInputs.password.classList.remove('error')
-
         validatePass(formInputs.password.value, formInputs.passwordConfirmation.value)
-        formInputs.passwordConfirmation.classList.add('success')
-        formInputs.passwordConfirmation.classList.remove('error')
+
+        removeClassError()
+        form.reset()
     }
     catch (error) {
-        formInputs[error.input].classList.remove('success')
         formInputs[error.input].classList.add('error')
     }
+})
+
+const closeModal = document.querySelector('#closeModalPrimeiro')
+closeModal.addEventListener('click', () => {
+    removeClassError()
+    form.reset()
 })
