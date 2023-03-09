@@ -125,7 +125,7 @@ main section #modalPrimeiro .modal-body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.3rem;
 }
 main section #modalPrimeiro .modal-body h1 {
   margin: 1.3rem 0;
@@ -133,10 +133,16 @@ main section #modalPrimeiro .modal-body h1 {
 }
 main section #modalPrimeiro .modal-body input {
   width: 250px;
-  margin-bottom: 5px;
+  margin-bottom: 0.6rem;
 }
-main section #modalPrimeiro .modal-body .password {
-  margin-top: 1.5rem;
+main section #modalPrimeiro .modal-body span {
+  font-size: 0.85rem;
+}
+main section #modalPrimeiro .modal-body .success {
+  border: 1px solid green !important;
+}
+main section #modalPrimeiro .modal-body .error {
+  border: 1px solid red !important;
 }
 main section #modalPrimeiro .modal-body #criarConta {
   width: 250px;
@@ -144,7 +150,6 @@ main section #modalPrimeiro .modal-body #criarConta {
   background-color: #fd9800;
   border-color: #fd9800;
   color: white;
-  margin: 15px 0;
   transition: 0.4s;
 }
 main section #modalPrimeiro .modal-body #criarConta:hover {
@@ -201,10 +206,6 @@ footer .buttons a:hover {
   transform: scale(1.1);
   color: #fd9800;
   border: 1px solid #fd9800;
-}
-
-.emBranco {
-  border-color: red !important;
 }
 
 @media (max-width: 1550px) {

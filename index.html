@@ -75,9 +75,20 @@
               <form>
                 <h1>Crie sua conta!</h1>
                 <button type="button" class="btn-close btn-close-login" data-bs-dismiss="modal" aria-label="Close"></button>
-                <input id="name" type="text" class="form-control" placeholder="Nome" required>
-                <input id="email" type="email" class="form-control" placeholder="Endereço de E-mail" required>
-                <input id="password" type="password" class="form-control" placeholder="Senha" required>
+                <input id="name" type="text" class="form-control" placeholder="Nome">
+                <input id="email" type="email" class="form-control" placeholder="Endereço de E-mail">
+                <span id="email-error">Formato de email válido: xx@xx.xx </span>
+                <input id="password" type="password" class="form-control" placeholder="Senha">
+                <span id="password-error">
+                  Senha precisa conter:
+                  <ul>
+                    <li>Mínimo 8 caracteres</li>
+                    <li>Letras minúsculas</li>
+                    <li>Letras maiúsculas</li>
+                    <li>Caracter Especial</li>
+                    <li>Número</li>
+                  </ul>
+                </span>
                 <input id="passwordConfirmation" type="password" class="form-control" placeholder="Confirmação de Senha" required>
                 <button type="submit" id="criarConta" class="btn">Continuar</button>
               </form>
@@ -104,7 +115,7 @@
   </footer>
 
     <!-- SCRIPT -->
-    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
 
     <!-- SCRIPT AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

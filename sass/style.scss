@@ -148,7 +148,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 0.6rem;
+                gap: 0.3rem;
 
                 h1 {
                     margin: 1.3rem 0;
@@ -157,11 +157,19 @@ main {
 
                 input {
                     width: 250px;
-                    margin-bottom: 5px;
+                    margin-bottom: 0.6rem;
                 }
 
-                .password {
-                    margin-top: 1.5rem;
+                span {
+                    font-size: 0.85rem;
+                }
+
+                .success {
+                    border: 1px solid green !important;
+                }
+
+                .error {
+                    border: 1px solid red !important;
                 }
 
                 #criarConta {
@@ -169,8 +177,7 @@ main {
                     border-radius: 20px;
                     background-color: $cor-primaria;  
                     border-color: $cor-primaria;                    
-                    color: white;                    
-                    margin: 15px 0;
+                    color: white;      
                     transition: .4s;
     
                     &:hover{
@@ -244,9 +251,7 @@ footer {
     }
 }
 
-.emBranco {
-    border-color: red !important;
-}
+
 
 
 @media (max-width: 1550px){
